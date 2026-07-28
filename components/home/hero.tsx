@@ -83,7 +83,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, delay: 0.5 }}
-          className="mt-3 font-serif text-6xl sm:text-7xl md:text-8xl lg:text-[10rem] font-extralight tracking-[0.18em] uppercase italic text-white leading-[0.95]"
+          className="mt-3 font-serif text-6xl sm:text-7xl md:text-8xl lg:text-[10rem] font-bold tracking-[0.18em] uppercase text-white leading-[0.95]"
         >
           Weddings
         </motion.h1>

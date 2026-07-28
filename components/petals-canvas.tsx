@@ -34,7 +34,7 @@ function Petals() {
     shape.moveTo(0, 0)
     shape.bezierCurveTo(0.2, 0.1, 0.3, 0.35, 0.15, 0.65)
     shape.bezierCurveTo(0, 0.85, -0.15, 0.65, -0.3, 0.35)
-    shape.bezierCurveTo(-0.2, 0.1, 0, 0)
+    shape.quadraticCurveTo(-0.2, 0.1, 0, 0)
     
     const geo = new THREE.ShapeGeometry(shape, 16)
     const pos = geo.attributes.position

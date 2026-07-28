@@ -13,7 +13,7 @@ const links = [
   { href: '/about', label: 'About' },
   { href: '/services', label: 'Services' },
   { href: '/venues', label: 'Venues' },
-  { href: '#blog', label: 'Blog' },
+  { href: '/blog', label: 'Blog' },
   { href: '/gallery', label: 'Wedding Gallery' },
   { href: '/contact', label: 'Enquire' },
 ]

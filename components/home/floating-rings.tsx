@@ -68,8 +68,8 @@ export function FloatingRings({ className }: { className?: string }) {
           rotation={[0, 0, 0]}
           polar={[-0.4, 0.4]}
           azimuth={[-0.8, 0.8]}
-          config={{ mass: 1, tension: 250 }}
-          snap={{ mass: 2, tension: 150 }}
+          snap
+          damping={0.25}
         >
           <Float speed={1.5} rotationIntensity={0.25} floatIntensity={0.6}>
             <Suspense fallback={null}>

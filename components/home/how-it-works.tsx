@@ -181,86 +181,19 @@ export function HowItWorks() {
       transition={{ duration: 0.5, ease: [0.25, 1, 0.5, 1] }}
       className="relative w-full h-full flex items-center justify-center p-6"
     >
-      {/* Wrapper to hold both Phone and Hand */}
-      <div className="relative">
-        {/* Stylized Floating Smartphone Mockup */}
-        <div className="relative w-[180px] h-[310px] bg-white rounded-[32px] shadow-2xl border-4 border-[#7A1D4B]/15 overflow-hidden flex flex-col z-10">
-          {/* Phone Notch */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-4 bg-slate-900 rounded-b-xl z-20" />
-          
-          {/* Chat Header */}
-          <div className="bg-[#7A1D4B] text-white pt-5 pb-2 px-3 text-center border-b border-[#7A1D4B]/10 z-10">
-            <p className="text-[10px] font-medium tracking-wider">FLORA CONCIERGE</p>
-            <div className="flex items-center justify-center gap-1 mt-0.5">
-              <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
-              <span className="text-[7px] text-white/70">Online Planner</span>
-            </div>
-          </div>
-
-          {/* Chat Screen Messages Area */}
-          <div className="flex-1 bg-[#FDFBF7] p-2.5 flex flex-col gap-2 overflow-y-auto text-[8.5px]">
-            {/* Welcome Message (Incoming) */}
-            <div className="self-start max-w-[85%] bg-white border border-[#E5D3B3] text-stone-700 rounded-2xl rounded-tl-none p-2 shadow-sm">
-              <p>Welcome! Tell us about your dream wedding requirements ✨</p>
-            </div>
-
-            {/* User Message (Outgoing) */}
-            <motion.div
-              initial={{ opacity: 0, y: 10, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ delay: 0.4, duration: 0.4 }}
-              className="self-end max-w-[90%] bg-[#7A1D4B] text-white rounded-2xl rounded-tr-none p-2.5 shadow-md mt-1"
-            >
-              <p className="font-medium">I want my wedding in Goa. My budget is 60 Lakhs</p>
-            </motion.div>
-
-            {/* Typing indicator or quick labels */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1 }}
-              className="mt-1 flex flex-wrap gap-1"
-            >
-              <div className="bg-white border border-[#7A1D4B]/20 text-[#7A1D4B] rounded-full px-2 py-0.5 font-medium flex items-center gap-0.5 scale-90 origin-left">
-                <MapPin className="w-2.5 h-2.5" /> Goa
-              </div>
-              <div className="bg-white border border-[#7A1D4B]/20 text-[#7A1D4B] rounded-full px-2 py-0.5 font-medium flex items-center gap-0.5 scale-90 origin-left">
-                <Sparkles className="w-2.5 h-2.5" /> Luxury
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Input Bar */}
-          <div className="p-2 bg-white border-t border-stone-100 flex items-center gap-1.5">
-            <div className="flex-1 bg-stone-50 rounded-full py-1 px-2.5 text-[8px] text-stone-400 border border-stone-100">
-              Type message...
-            </div>
-            <div className="w-5 h-5 bg-[#7A1D4B] rounded-full flex items-center justify-center text-white cursor-pointer hover:bg-[#601438] transition-colors">
-              <Send className="w-2.5 h-2.5" />
-            </div>
-          </div>
-        </div>
-
-        {/* Elegant Hand holding the phone from the bottom right */}
-        <div className="absolute -bottom-10 -right-6 w-[200px] h-[220px] pointer-events-none z-30">
-          <svg viewBox="0 0 200 220" className="w-full h-full drop-shadow-xl" fill="none" xmlns="http://www.w3.org/2000/svg">
-            {/* Sleeve (plum color to match brand) */}
-            <path d="M130 220 L190 220 C190 170 165 135 135 125 L105 160 Z" fill="#7A1D4B" />
-            {/* Gold watch or cuff line */}
-            <path d="M135 125 L105 160" stroke="#C5A880" strokeWidth="4.5" strokeLinecap="round" />
-            {/* Hand palm & fingers in soft skin tone */}
-            <path d="M105 160 C90 145 78 125 72 105 C66 85 72 75 82 75 C92 75 98 95 105 110 C108 95 112 80 120 80 C128 80 130 95 128 110 C132 98 138 88 145 88 C152 88 152 100 148 112 C152 102 158 95 164 95 C170 95 170 108 164 120 C155 142 135 165 105 160 Z" fill="#FDF6EE" stroke="#E5D3B3" strokeWidth="2" strokeLinejoin="round" />
-            {/* Thumb wrapping around screen */}
-            <path d="M72 105 C58 105 48 110 44 120 C40 128 48 133 56 130 C64 127 68 120 72 105 Z" fill="#FDF6EE" stroke="#E5D3B3" strokeWidth="2" strokeLinejoin="round" />
-          </svg>
-        </div>
-      </div>
+      <motion.img
+        src="/images/how-it-works-step1.png"
+        alt="Flora Concierge Share requirements"
+        className="w-[200px] h-[200px] md:w-[260px] md:h-[260px] object-cover rounded-full shadow-2xl border-4 border-[#E5D3B3]/30 z-10"
+        animate={{ y: [0, -6, 0] }}
+        transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+      />
 
       {/* Floating Requirement Tags around phone */}
       <motion.div
         animate={{ y: [0, -6, 0] }}
         transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
-        className="absolute top-12 left-[-16px] md:left-[-32px] bg-white shadow-lg border border-[#E5D3B3] rounded-2xl p-2 flex items-center gap-1.5 text-xs text-stone-700 font-sans z-20"
+        className="absolute top-8 left-[-16px] md:left-[-24px] bg-white shadow-lg border border-[#E5D3B3] rounded-2xl p-2 flex items-center gap-1.5 text-xs text-stone-700 font-sans z-20"
       >
         <div className="w-6 h-6 bg-[#FAF6F0] text-[#7A1D4B] rounded-lg flex items-center justify-center">
           <Calendar className="w-3.5 h-3.5" />
@@ -274,7 +207,7 @@ export function HowItWorks() {
       <motion.div
         animate={{ y: [0, 6, 0] }}
         transition={{ repeat: Infinity, duration: 3.5, ease: 'easeInOut' }}
-        className="absolute bottom-16 right-[-16px] md:right-[-32px] bg-white shadow-lg border border-[#E5D3B3] rounded-2xl p-2 flex items-center gap-1.5 text-xs text-stone-700 font-sans z-20"
+        className="absolute bottom-12 right-[-16px] md:right-[-24px] bg-white shadow-lg border border-[#E5D3B3] rounded-2xl p-2 flex items-center gap-1.5 text-xs text-stone-700 font-sans z-20"
       >
         <div className="w-6 h-6 bg-[#FAF6F0] text-[#7A1D4B] rounded-lg flex items-center justify-center">
           <Users className="w-3.5 h-3.5" />
@@ -345,70 +278,26 @@ export function HowItWorks() {
         transition={{ duration: 0.5, ease: [0.25, 1, 0.5, 1] }}
         className="relative w-full h-full flex items-center justify-center p-6"
       >
-        {/* Elegantly tilted Wedding Invitation Card */}
-        <motion.div
-          animate={{ rotate: [-2, 2, -2] }}
-          transition={{ repeat: Infinity, duration: 6, ease: 'easeInOut' }}
-          className="relative w-[200px] h-[270px] bg-[#FAF6F0] rounded-xl shadow-2xl p-5 border border-[#E5D3B3] flex flex-col justify-between overflow-hidden"
-        >
-          {/* Subtle gold invitation border */}
-          <div className="absolute inset-2 border border-[#E5D3B3]/40 rounded-lg pointer-events-none" />
-          <div className="absolute inset-2.5 border border-[#C5A880]/30 rounded-lg pointer-events-none" />
-
-          {/* Invitation Top Header */}
-          <div className="text-center mt-2">
-            <span className="text-[7px] tracking-[0.3em] font-medium text-[#C5A880] uppercase">
-              Save The Date
-            </span>
-            <div className="w-8 h-px bg-[#E5D3B3]/60 mx-auto mt-1" />
-          </div>
-
-          {/* Bride & Groom Names in rich serif script */}
-          <div className="text-center my-auto">
-            <h4 className="font-serif text-2xl md:text-3xl font-semibold text-[#7A1D4B] leading-none">
-              Rahul
-            </h4>
-            <span className="font-serif text-sm italic text-[#C5A880] my-1.5 block">&</span>
-            <h4 className="font-serif text-2xl md:text-3xl font-semibold text-[#7A1D4B] leading-none">
-              Kajal
-            </h4>
-          </div>
-
-          {/* Invitation details */}
-          <div className="text-center mb-2 z-10">
-            <p className="text-[7.5px] uppercase tracking-[0.2em] font-medium text-stone-500">
-              Personalised Proposal
-            </p>
-            <p className="text-[6.5px] font-sans text-stone-400 mt-1">
-              Venue: Beachfront Resort, Goa
-            </p>
-            <p className="text-[6.5px] font-sans text-stone-400">
-              Catering, Decor & Lights Included
-            </p>
-          </div>
-
-          {/* Marigolds draped on the card */}
-          <Marigold size={34} className="absolute -top-1 -left-1" />
-          <Marigold size={26} className="absolute top-4 -left-2" />
-          <Marigold size={26} className="absolute -top-2 left-5" />
-
-          <Marigold size={34} className="absolute -bottom-1 -right-1" />
-          <Marigold size={26} className="absolute bottom-4 -right-2" />
-          <Marigold size={26} className="absolute -bottom-2 right-5" />
-        </motion.div>
+        <motion.img
+          src="/images/how-it-works-step2.png"
+          alt="Wedding invitation save the date"
+          className="w-[200px] h-[200px] md:w-[260px] md:h-[260px] object-cover rounded-full shadow-2xl border-4 border-[#E5D3B3]/30 z-10"
+          animate={{ rotate: [-2, 2, -2], y: [0, 4, 0] }}
+          transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+        />
 
         {/* Extra floating marigolds outside */}
         <motion.div
           animate={{ y: [0, -8, 0], rotate: [0, 15, 0] }}
           transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
-          className="absolute top-10 right-6"
+          className="absolute top-10 right-4 z-20"
         >
           <Marigold size={36} />
         </motion.div>
         <motion.div
           animate={{ y: [0, 8, 0], rotate: [0, -15, 0] }}
           transition={{ repeat: Infinity, duration: 4.5, ease: 'easeInOut' }}
-          className="absolute bottom-10 left-6"
+          className="absolute bottom-10 left-4 z-20"
         >
           <Marigold size={30} />
         </motion.div>
@@ -426,92 +315,31 @@ export function HowItWorks() {
       transition={{ duration: 0.5, ease: [0.25, 1, 0.5, 1] }}
       className="relative w-full h-full flex items-center justify-center p-6"
     >
-      {/* Traditional Indian Wedding Mandap Stage Setup */}
-      <div className="relative w-[240px] h-[240px] flex items-end justify-center">
-        {/* Mandap Floor Platform */}
-        <div className="w-full h-5 bg-gradient-to-r from-[#C5A880]/70 via-[#E5D3B3] to-[#C5A880]/70 rounded-md relative z-10 border border-[#C5A880]/40 shadow-md">
-          {/* Soft carpet top */}
-          <div className="absolute inset-x-1 top-0 h-1 bg-[#7A1D4B]/70 rounded-t-sm" />
-        </div>
+      <motion.img
+        src="/images/how-it-works-step3.png"
+        alt="Wedding mandap confirmed"
+        className="w-[200px] h-[200px] md:w-[260px] md:h-[260px] object-cover rounded-full shadow-2xl border-4 border-[#E5D3B3]/30 z-10"
+        animate={{ scale: [1, 1.03, 1] }}
+        transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+      />
 
-        {/* Mandap Pillars (Left and Right Columns) */}
-        {/* Left Pillars */}
-        <div className="absolute bottom-5 left-8 w-2 h-32 bg-gradient-to-b from-[#E5D3B3] to-[#C5A880] border border-[#C5A880]/40 z-0">
-          {/* Flower wraps on pillars */}
-          <div className="absolute top-8 left-0 right-0 h-3 bg-rose-400/80 rounded-full" />
-          <div className="absolute top-16 left-0 right-0 h-3 bg-amber-400/80 rounded-full" />
-          <div className="absolute top-24 left-0 right-0 h-3 bg-rose-400/80 rounded-full" />
-        </div>
-        <div className="absolute bottom-5 left-12 w-2 h-32 bg-gradient-to-b from-[#E5D3B3] to-[#C5A880] border border-[#C5A880]/40 z-0 opacity-80">
-          <div className="absolute top-12 left-0 right-0 h-3 bg-amber-400/80 rounded-full" />
-          <div className="absolute top-20 left-0 right-0 h-3 bg-rose-400/80 rounded-full" />
-        </div>
-
-        {/* Right Pillars */}
-        <div className="absolute bottom-5 right-8 w-2 h-32 bg-gradient-to-b from-[#E5D3B3] to-[#C5A880] border border-[#C5A880]/40 z-0">
-          <div className="absolute top-8 left-0 right-0 h-3 bg-rose-400/80 rounded-full" />
-          <div className="absolute top-16 left-0 right-0 h-3 bg-amber-400/80 rounded-full" />
-          <div className="absolute top-24 left-0 right-0 h-3 bg-rose-400/80 rounded-full" />
-        </div>
-        <div className="absolute bottom-5 right-12 w-2 h-32 bg-gradient-to-b from-[#E5D3B3] to-[#C5A880] border border-[#C5A880]/40 z-0 opacity-80">
-          <div className="absolute top-12 left-0 right-0 h-3 bg-amber-400/80 rounded-full" />
-          <div className="absolute top-20 left-0 right-0 h-3 bg-rose-400/80 rounded-full" />
-        </div>
-
-        {/* Draped Arch Canopy at the top */}
-        <div className="absolute bottom-32 w-[190px] h-12 z-10 flex items-start justify-center">
-          {/* Main Gold Canopy Rod */}
-          <div className="w-full h-3.5 bg-gradient-to-r from-[#C5A880] via-[#E5D3B3] to-[#C5A880] rounded-full border border-[#C5A880]/40 relative">
-            {/* Elegant Floral Garland draping from rod */}
-            <div className="absolute -bottom-2 inset-x-4 h-2 bg-gradient-to-r from-rose-500 via-amber-400 to-rose-500 rounded-full" />
-          </div>
-          
-          {/* Peach/Pink Drapery flowing from sides */}
-          <svg className="absolute top-2.5 left-0 w-16 h-28 text-pink-400/60 fill-current" viewBox="0 0 100 200">
-            <path d="M 0 0 Q 30 20, 40 80 Q 50 140, 15 200 L 0 200 Z" />
-          </svg>
-          <svg className="absolute top-2.5 right-0 w-16 h-28 text-pink-400/60 fill-current" viewBox="0 0 100 200">
-            <path d="M 100 0 Q 70 20, 60 80 Q 50 140, 85 200 L 100 200 Z" />
-          </svg>
-        </div>
-
-        {/* Royal Seating Inside Mandap (Chairs/Sofa) */}
-        <div className="absolute bottom-5 inset-x-0 h-14 z-10 flex items-center justify-center gap-3">
-          {/* Left royal chair */}
-          <div className="w-8 h-12 bg-amber-50 border-2 border-[#C5A880] rounded-lg relative shadow-sm flex flex-col justify-end">
-            <div className="absolute top-1 inset-x-1.5 bottom-4 bg-[#7A1D4B]/70 rounded-md" />
-            <div className="h-2 bg-[#C5A880] rounded-b-sm" />
-          </div>
-          {/* Right royal chair */}
-          <div className="w-8 h-12 bg-amber-50 border-2 border-[#C5A880] rounded-lg relative shadow-sm flex flex-col justify-end">
-            <div className="absolute top-1 inset-x-1.5 bottom-4 bg-[#7A1D4B]/70 rounded-md" />
-            <div className="h-2 bg-[#C5A880] rounded-b-sm" />
-          </div>
-        </div>
-
-        {/* Small Hawan Kund (Fire altar) decoration in front */}
-        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 w-6 h-4 bg-stone-700 rounded-b-sm z-20 flex items-center justify-center">
-          <div className="w-3 h-3 bg-amber-500 rounded-full animate-ping" />
-        </div>
-
-        {/* Floating large pink checkmark above Mandap */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5, y: 10 }}
-          animate={{ opacity: 1, scale: 1, y: -8 }}
-          transition={{
-            delay: 0.3,
-            type: 'spring',
-            stiffness: 150,
-            damping: 12,
-            repeat: Infinity,
-            repeatType: 'reverse',
-            duration: 2.5
-          }}
-          className="absolute -top-6 left-1/2 -translate-x-1/2 w-14 h-14 bg-gradient-to-br from-pink-400 to-[#7A1D4B] rounded-full shadow-2xl flex items-center justify-center text-white border-2 border-white z-30"
-        >
-          <Check className="w-8 h-8 stroke-[3.5]" />
-        </motion.div>
-      </div>
+      {/* Floating large pink checkmark above Mandap */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5, y: 10 }}
+        animate={{ opacity: 1, scale: 1, y: -8 }}
+        transition={{
+          delay: 0.3,
+          type: 'spring',
+          stiffness: 150,
+          damping: 12,
+          repeat: Infinity,
+          repeatType: 'reverse',
+          duration: 2.5
+        }}
+        className="absolute top-2 left-1/2 -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-pink-400 to-[#7A1D4B] rounded-full shadow-2xl flex items-center justify-center text-white border-2 border-white z-35"
+      >
+        <Check className="w-6 h-6 stroke-[3.5]" />
+      </motion.div>
     </motion.div>
   )
 

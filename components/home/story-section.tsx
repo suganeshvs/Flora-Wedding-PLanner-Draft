@@ -22,7 +22,7 @@ export function StorySection() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-              className="font-serif text-7xl font-semibold italic text-primary md:text-9xl"
+              className="font-serif text-7xl font-semibold text-primary md:text-9xl"
             >
               Flora
             </motion.p>
