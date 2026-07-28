@@ -25,19 +25,8 @@ An immersive, high-end digital web application designed for a luxury wedding pla
 
 ## Project Structure
 
-├── app/                  # Next.js App Router (pages & layouts)
-│   ├── about/            # About page
-│   ├── blog/             # Wedding stories & articles
-│   ├── contact/          # Consultation inquiry
-│   ├── gallery/          # Visual wedding showcases
-│   ├── services/         # Bespoke planning packages
-│   └── page.tsx          # Homepage with 3D canvas & reveals
-├── components/           # UI components & sections
-│   ├── home/             # Hero, 3D Invite, Stage reveal, Story components
-│   ├── ui/               # Reusable UI primitives
-│   └── petals-canvas.tsx # Floral petal canvas animation engine
-├── public/               # Static assets & local web fonts
-└── package.json          # Project dependencies & scripts
+<img width="707" height="311" alt="image" src="https://github.com/user-attachments/assets/46db6a57-e48a-4a71-b6e1-62d659bbbd12" />
+
 
 
 
